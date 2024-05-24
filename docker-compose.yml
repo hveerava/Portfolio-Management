@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+    depends_on:
+      - db
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:8080"
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: finance
+    ports:
+      - "5432:5432"
+  ml_service:
+    build: ./ml_service
+    ports:
+      - "5001:5001"

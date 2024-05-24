@@ -21,3 +21,7 @@ services:
       POSTGRES_DB: finance
     ports:
       - "5432:5432"
+  ml_service:
+    build: ./ml_service
+    ports:
+      - "5001:5001"
