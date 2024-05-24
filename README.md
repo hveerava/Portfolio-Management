@@ -1,4 +1,5 @@
 # Financial Portfolio Management System
+Yet to complete. Debugging ongoing.
 
 ## Project Overview
 A comprehensive system to manage financial portfolios, track investments, analyze performance, and predict trends using machine learning.
